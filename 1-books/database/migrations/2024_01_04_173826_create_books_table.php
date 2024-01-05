@@ -19,7 +19,10 @@ return new class extends Migration
          $table->foreign("author_id")
             ->references("id")
             ->on("authors");
-         $table->string("genre");
+         $table->foreignId("genre_id");
+         $table->foreign("genre_id")
+            ->references("id")
+            ->on("genres");
          $table->date("publication_date");
       });
    }
