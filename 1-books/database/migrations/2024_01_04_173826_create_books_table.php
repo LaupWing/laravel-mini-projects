@@ -15,7 +15,10 @@ return new class extends Migration
          $table->id();
          $table->timestamps();
          $table->string("title");
-         $table->string("author");
+         $table->foreignId("author_id");
+         $table->foreign("author_id")
+            ->references("id")
+            ->on("authors");
          $table->string("genre");
          $table->date("publication_date");
       });
