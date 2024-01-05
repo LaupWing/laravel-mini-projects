@@ -15,6 +15,7 @@ return new class extends Migration
          $table->id();
          $table->timestamps();
          $table->string("title");
+         $table->date("publication_date");
          $table->foreignId("author_id");
          $table->foreign("author_id")
             ->references("id")
@@ -23,7 +24,6 @@ return new class extends Migration
          $table->foreign("genre_id")
             ->references("id")
             ->on("genres");
-         $table->date("publication_date");
       });
    }
 
