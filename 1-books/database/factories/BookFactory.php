@@ -18,7 +18,7 @@ class BookFactory extends Factory
    public function definition(): array
    {
       return [
-         "title" => fake()->title(),
+         "title" => fake()->sentence(),
          "description" => fake()->text(),
          "publication_date" => fake()->date(),
          "genre_id" => fake()->numberBetween(1, Genre::count()),

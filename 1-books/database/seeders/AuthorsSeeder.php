@@ -16,11 +16,11 @@ class AuthorsSeeder extends Seeder
     {
         Author::factory()
             ->count(5)
-            ->has(Book::factory()->count(3))
+            ->has(Book::factory()->count(10))
             ->create();
         Author::factory()
             ->count(5)
-            ->hasBooks(3)
+            ->hasBooks(10)
             ->create();
     }
 }
