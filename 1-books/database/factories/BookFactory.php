@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Genre;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -22,6 +23,7 @@ class BookFactory extends Factory
          "description" => fake()->text(),
          "publication_date" => fake()->date(),
          "genre_id" => fake()->numberBetween(1, Genre::count()),
+         "lender_id" => fake()->optional(0.5)->numberBetween(1, User::count()),
       ];
    }
 }
