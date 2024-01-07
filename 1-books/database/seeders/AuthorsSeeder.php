@@ -16,7 +16,9 @@ class AuthorsSeeder extends Seeder
     {
         Author::factory()
             ->count(5)
-            ->has(Book::factory()->count(3))
+            ->has(Book::factory()->count(3)->create([
+                'genre_id' => 1,
+            ]))
             ->create();
         Author::factory()
             ->count(5)
