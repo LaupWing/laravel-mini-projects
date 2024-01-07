@@ -18,5 +18,9 @@ class AuthorsSeeder extends Seeder
             ->count(5)
             ->has(Book::factory()->count(3))
             ->create();
+        Author::factory()
+            ->count(5)
+            ->hasBooks(3)
+            ->create();
     }
 }
