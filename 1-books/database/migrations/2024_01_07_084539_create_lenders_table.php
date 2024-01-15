@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create("lenders", function (Blueprint $table) {
             $table->id();
+            $table->foreignId("book_id");
+            $table->foreign("book_id")
+                ->references("id")
+                ->on("books");
             $table->foreignId("user_id");
             $table->foreign("user_id")
                 ->references("id")

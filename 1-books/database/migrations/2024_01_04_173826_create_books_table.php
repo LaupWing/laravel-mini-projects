@@ -25,7 +25,7 @@ return new class extends Migration
             ->nullable();
          $table->foreign("lender_id")
             ->references("id")
-            ->on("users");
+            ->on("lenders");
          $table->foreignId("genre_id");
          $table->foreign("genre_id")
             ->references("id")
