@@ -16,6 +16,18 @@ return new class extends Migration
             $table->foreign("book_id")
                 ->references("id")
                 ->on("books");
+                $table->foreignId("book_id");
+                $table->foreign("book_id")
+                    ->references("id")
+                    ->on("books");
+            $table->foreignId("genre_id");
+            $table->foreign("genre_id")
+                ->references("id")
+                ->on("genres");
+                $table->foreignId("genre_id");
+                $table->foreign("genre_id")
+                    ->references("id")
+                    ->on("genres");
         });
     }
 
