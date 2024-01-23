@@ -20,8 +20,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::get("/books", function (Request $request) {
+Route::get("/books", function () {
     return [
         "books" => Book::all()
-    ]
+    ];
 });
