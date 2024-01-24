@@ -22,8 +22,7 @@ class BookFactory extends Factory
          "title" => fake()->sentence(),
          "description" => fake()->text(),
          "publication_date" => fake()->date(),
-         "genre_id" => fake()->numberBetween(1, Genre::count()),
-         "lender_id" => fake()->optional(0.5)->numberBetween(1, User::count()),
+         "genre_id" => fake()->numberBetween(1, Genre::count())
       ];
    }
 }
