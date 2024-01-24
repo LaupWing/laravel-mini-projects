@@ -26,8 +26,6 @@ class DatabaseSeeder extends Seeder
          GenreSeeder::class,
          AuthorsSeeder::class
       ]);
-      logger(Genre::all()->count());
-      logger(Book::all()->count());
-      // GenreBookFactory::factory(100)->create();
+      GenreBookFactory::factory(100)->create();
    }
 }
