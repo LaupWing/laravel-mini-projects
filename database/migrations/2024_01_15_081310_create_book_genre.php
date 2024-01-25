@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create("genre_book", function (Blueprint $table) {
+        Schema::create("book_genre", function (Blueprint $table) {
             $table->foreignId("book_id");
             $table->foreign("book_id")
                 ->references("id")
