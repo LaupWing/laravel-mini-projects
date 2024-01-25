@@ -23,9 +23,9 @@ class DatabaseSeeder extends Seeder
          "email" => "test@example.com",
       ]);
       $this->call([
-         GenreSeeder::class,
+         // GenreSeeder::class,
          AuthorsSeeder::class
       ]);
-      GenreBookFactory::factory(100)->create();
+      // GenreBookFactory::factory(100)->create();
    }
 }
