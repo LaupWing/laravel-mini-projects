@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Author;
 use App\Models\Book;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -23,5 +24,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get("/books", function () {
     return [
         "books" => Book::with("author")->get()
+    ];
+});
+
+Route::get("/authors", function () {
+    return [
+        "books" => Author::with("books")->get()
     ];
 });
