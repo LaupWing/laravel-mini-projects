@@ -20,6 +20,7 @@ return new class extends Migration
             $table->foreign("genre_id")
                 ->references("id")
                 ->on("genres");
+            $table->primary(["book_id", "genre_id"]);
         });
     }
 
