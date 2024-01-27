@@ -21,6 +21,7 @@ return new class extends Migration
                 ->references("id")
                 ->on("genres");
             $table->primary(["book_id", "genre_id"]);
+            $table->unique(["book_id", "genre_id"]);
         });
     }
 
