@@ -4,8 +4,6 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-use App\Models\Book;
-use App\Models\Genre;
 use App\Models\User;
 use Database\Factories\GenreBookFactory;
 use Illuminate\Database\Seeder;
