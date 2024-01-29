@@ -2,8 +2,6 @@
 
 namespace Database\Factories;
 
-use App\Models\Genre;
-use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -22,7 +20,6 @@ class BookFactory extends Factory
          "title" => fake()->sentence(),
          "description" => fake()->text(),
          "publication_date" => fake()->date(),
-         // "genre_id" => fake()->numberBetween(1, Genre::count())
       ];
    }
 }
